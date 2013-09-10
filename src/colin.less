@@ -79,6 +79,9 @@ a img { border: none; }
 .picLink{
   width: ((@cell-size * 2) + 4) ;
   height: ((@cell-size * 2) + 4);
+  ul{
+    display: inline;
+  }
 }
 .metro{
   width: @cell-size;
@@ -97,10 +100,10 @@ a img { border: none; }
       color:white;
       font-family: "微软雅黑", "Segoe UI";
       -webkit-transition: all 1s;
-      -moz-webkit-transition: all 1s;
-      -ms-webkit-transition: all 1s;
-      -o-webkit-transition: all 1s;
-      webkit-transition: all 1s;     
+      -moz-webkit-transition: all 0.6s;
+      -ms-webkit-transition: all 0.6s;
+      -o-webkit-transition: all 0.6s;
+      webkit-transition: all 0.6s;     
   }
 }
 .metro:nth-child(3) a{
@@ -116,8 +119,8 @@ a img { border: none; }
 }
 .metro a:hover{
   color:black;
-  filter:alpha(Opacity=80); 
-  opacity: 0.85;
+  filter:alpha(Opacity=70); 
+  opacity: 0.7;
   /*text-shadow:5px 2px 6px white;*/
 
 }
