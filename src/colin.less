@@ -67,12 +67,57 @@ a img { border: none; }
 :focus { outline: 0; }
 
 
-@color: #4D926F;
-
-#header {
-	color: @color;
+@caolv: #8CC600;
+@hulan: #00ABA9;
+@orange: #F09609;
+@purple: #A200FF;
+@cell-size:143px;
+@blue: #2D89EF;
+@green: #00A300;
+@chengse: #FFC40D;
+@zise: ##9F00A7;
+.picLink{
+  width: ((@cell-size * 2) + 4) ;
+  height: ((@cell-size * 2) + 4);
+}
+.metro{
+  width: @cell-size;
+  height: @cell-size;
+  list-style: none;
+  margin:0px;
+  text-align: center;
+  float:left;
+  margin: 2px 0 0 2px;
+  a{
+      text-decoration:none;
+      display: block;
+      background-color: @hulan;
+      font-size: 18px;
+      line-height: @cell-size;
+      color:white;
+      font-family: "微软雅黑", "Segoe UI";
+      -webkit-transition: all 1s;
+      -moz-webkit-transition: all 1s;
+      -ms-webkit-transition: all 1s;
+      -o-webkit-transition: all 1s;
+      webkit-transition: all 1s;     
+  }
+}
+.metro:nth-child(3) a{
+  background-color: @orange;
 }
 
-h2{
-	color: @color;
+.metro:nth-child(2) a{
+  background-color: @caolv;
+}
+
+.metro:nth-child(1) a{
+  background-color: @purple;
+}
+.metro a:hover{
+  color:black;
+  filter:alpha(Opacity=80); 
+  opacity: 0.85;
+  /*text-shadow:5px 2px 6px white;*/
+
 }
