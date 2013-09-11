@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Tetris 疯狂俄罗斯方块 </title>
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=PT+Mono|Montserrat:700' >
+	<script type="text/javascript" src="tetris.js"></script>
+	<style type="text/css">
+		@font-face {
+			font-family: tmb;
+			src: url("DS-DIGIB.TTF") format("TrueType");
+		}
+
+		header{
+			text-align: center;
+			font-family: 'PT Mono', 'Helvetica Neue', Arial, sans-serif;
+                color: #333;
+		}
+		#wrapper {
+			margin: 0 auto;
+			font-size:13pt;
+			padding-bottom: 8px;
+			width:336px;
+			height: 18px;
+			border:1px solid black;
+			background: #ff9;
+		}
+		#wrapper canvas{
+			margin-top:2px;
+		}
+		span {
+			font-family: tmb;
+			font-size:20pt;
+			color: green;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h2>Tetris</h2>
+	</header>
+	<div id="wrapper">
+			<div style="float:left;">
+				速度:<span id="curSpeedEle"></span>
+				当前积分:<span id="curScoreEle"></span>
+			</div>
+			<div style="float:right;">最高积分:<span id="maxScoreEle"></span>
+			</div>
+	</div>
+	<footer></footer>
+</body>
+</html>
