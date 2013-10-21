@@ -150,6 +150,8 @@ var drawBlock = function()
 				// 设置填充颜色
 				tetris_ctx.fillStyle = colors[tetris_status[i][j]];
 				// 绘制矩形
+				//写成这样了tetris_ctx.fillRect = ( j * CELL_SIZE +1 , i * CELL_SIZE + 1, CELL_SIZE - 2, CELL_SIZE - 2);控制台不会报错
+					//花了半个下午怎么也调不出来哪里出错，第二天发现这个错误真是啼笑皆非！
 				tetris_ctx.fillRect(j * CELL_SIZE + 1 
 					, i * CELL_SIZE + 1, CELL_SIZE - 2 , CELL_SIZE - 2);
 				// console.log( j * CELL_SIZE + 1 , i * CELL_SIZE + 1, CELL_SIZE - 2, CELL_SIZE - 2);
