@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>可拖拽按钮 for iphone</title>
+
+    <script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy-min.js"></script>
+<style id="jsbin-css">
+
+.container{width:100%;height:100%;}
+.set
+{
+    margin:0 auto;
+    width:200px;
+    height:200px;
+    position: relative;
+    border:1px solid #ebeded;
+    border-radius:35px;
+    -webkit-border-radius:35px;
+    -moz-border-radius:35px;
+    -o-border-radius:35px;    
+    background:#f6f6f6;
+    background:-webkit-gradient(linear,0% 0%,0% 100%,from(#f6f6f6),to(#dedede));
+    background:-moz-linear-gradient(top,#f6f6f6,#dedede);
+    background:-o-linear-gradient(top,#f6f6f6,#dedede);
+    background:-ms-linear-gradient(#f6f6f6 0%,#dbdcdc 100%);  
+}
+.switch
+{
+    width:120px;
+    height:74px;
+    border:1px solid #e9e9e9;
+    border-radius:35px;
+    -webkit-border-radius:38px;
+    -moz-border-radius:38px;
+    -o-border-radius:38px;
+    margin:16px 0 0 37px;
+    box-shadow:inset 0 1px 0 0 #d9d9d9;
+    -webkit-box-shadow:inset 0 1px 0 0 #d9d9d9;
+    -moz-box-shadow:inset 0 1px 0 0 #d9d9d9;  
+    background:#f7f7f7;
+    background:-webkit-gradient(linear,0% 0%,0% 100%,from(#f7f7f7),to(#ffffff));
+    background:-moz-linear-gradient(top,#f7f7f7,#ffffff);
+    background:-o-linear-gradient(top,#f7f7f7,#ffffff);
+    background:-ms-linear-gradient(#f7f7f7 0%,#ffffff 100%);
+    border-bottom:1px solid #e7e7e7;
+}
+
+.active 
+{ 
+    box-shadow:inset 0 1px 0 0 #56b767;
+    -webkit-box-shadow:inset 0 1px 0 0 #56b767;
+    -moz-box-shadow:inset 0 1px 0 0 #56b767; 
+    background:#4cd964;
+}
+.btn
+{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -o-border-radius:50%;
+    border-top:1px solid #f3f3f3;
+    border-bottom:1px solid #d1d1d1;
+    box-shadow:0px 4px 6px #dcdcdc;  
+    -webkit-box-shadow:0px 4px 6px #dcdcdc;
+    -moz-box-shadow:0px 4px 6px #dcdcdc;
+    background:#fdfdfd;
+    background:-webkit-gradient(linear,0% 0%,0% 100%,from(#fdfdfd),to(#ffffff));
+    background:-moz-linear-gradient(top,#fdfdfd,#ffffff);
+    background:-o-linear-gradient(top,#fdfdfd,#ffffff);
+    background:-ms-linear-gradient(#fdfdfd 0%,#ffffff 100%);
+    margin:4px;
+}
+.active .btn
+{
+    border:1px solid #f2f2f2;
+    box-shadow:0px 3px 3px #41af54;
+    -moz-box-shadow:0px 3px 3px #41af54;  
+    float:right;   
+    margin:3px;
+}
+
+@-webkit-keyframes ccc{
+    0% {}
+    100% {margin-right:51px;}
+}
+.btn:active{
+/*      transform:translate(-48px,0px);
+-webkit-transform:translate(-48px,0px) ;  */
+
+ -webkit-animation-name: ccc;
+ -webkit-animation-duration: .6s;
+ -webkit-animation-timing-function: linear;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="set">
+            <div class="switch ">
+                <div class="btn"></div>
+            </div>
+            <div class="switch active">
+                <div class="btn"></div>
+            </div>
+        </div> 
+    </div>
+
+<script>
+KISSY.use('node, event,dd', function(s,d,v,DD){
+    s.ready(function(){
+        s.all('.switch').on('click', function(){
+            var that = d(this);
+            that.toggleClass("active");
+
+        });
+
+        new DD.Draggable({
+        node:'.container',
+        cursor:'move',
+        move:true
+    });
+    });
+});
+
+
+/*  KISSY.use("anim,node,button",function(S,Anim,Node,Button){
+        alert();
+        var sw = S.one(".switch").filter(".active");
+        var anim = Anim(
+                sw,
+                {
+                    'border-top':'1px solid #f3f3f3',
+                    'border-bottom':'1px solid #d1d1d1',
+                    'box-shadow':'0px 4px 6px #dcdcdc', 
+                    'background':'#fdfdfd',
+                    'background':'-webkit-gradient(linear,0% 0%,0% 100%,from(#fdfdfd),to(#ffffff))',
+                    'margin':'4px'
+                },3,
+                'easing',function(){
+                    alert('demo1 结束');
+                });
+        anim.run();
+});*/
+</script>
+</body>
+</html>

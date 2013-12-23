@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script type="text/javascript" src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy-min.js"></script>
+     <style>
+    #test1{
+        position: relative;
+    }
+</style>
+</head>
+<body>
+    <button id="test1" class="switch on"> =.= </button>
+<SCRIPT TYPE="text/javascript">
+    KISSY.use("anim,node,button",function(S,Anim,Node,Button){
+    //KISSY 1.2 以前可通过 var Node=S.Node ; var Anim=S.Anim
+    var sw = S.one(".switch").filter(".on");
+     var anim = Anim(
+            sw,
+            {
+                'background-color':'#fcc',
+                //'border': '5px dashed #999',
+                'border-wdith':'5px',
+                'border-color':"#999999",
+                'border-style':"dashed",
+                'width': '100px',
+                'height': '50px',
+                'left': '900px',
+                'top': '285px',
+                'opacity': '.5',
+                'font-size': '48px',
+                'padding': '30px 0',
+                'color': '#FF3333'
+            },3,
+            'easing',function(){
+                console.log('demo1 结束');
+            });
+
+    
+        anim.run();
+ 
+});
+</SCRIPT>
+</body>
+</html>

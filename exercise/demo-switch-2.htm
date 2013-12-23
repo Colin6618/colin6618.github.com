@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<!-- <link rel="stylesheet" type="text/css" href="css/switch.css"> -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Mono|Montserrat:700">
+<style type="text/css">
+.switch{
+	font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 12px;
+	display: inline-block;
+	width:3.5rem;
+	border:1px solid #343434;
+	position: relative;
+	border-radius: 5px;
+	background: #343434;
+	overflow: hidden;
+}
+
+.switch__input{
+	position: absolute;
+	opacity:0.0;
+	margin:0;
+}
+
+.switch__toggle{
+	border:1px solid #343434;
+	position: relative;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	width: 1rem;
+	border-radius:5px;
+	background: #c6c8c8;
+color: #288edf;
+box-shadow: inset 0 1px rgba(33, 44, 48, 0.69);
+text-shadow: 0 1px rgba(0,0,0,0.69);
+	-webkit-transition: margin-left 0.05s ease-in-out;
+	-moz-transition: margin-left 0.05s ease-in-out;
+	-ms-transition: margin-left 0.05s ease-in-out;
+	-o-transition: margin-left 0.05s ease-in-out;
+	transition: margin-left 0.05s ease-in-out;
+}
+.switch__input:checked + .switch__toggle {
+	margin-left: 2.43rem;
+}
+
+.switch__input:disabled + .switch__toggle {
+	opacity: 0.1;
+}
+
+.switch__toggle:before {
+	content: "ON";
+position: absolute;
+top: 0;
+left: -1.5rem;
+}
+.switch__toggle:after {
+	content: "OFF";
+	color:#c6c8c8;
+position: absolute;
+left: 1.5rem;
+}
+
+</style>
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox" class="switch__input">
+    <div class="switch__toggle"></div>
+  </label>
+  <!-- 用Label的原因是点击label范围 checkbox也有效。但是，为什么其他标签不行？ -->
+<br>
+<br>
+<label class="switch">
+  <input type="checkbox" class="switch__input" checked>
+  <div class="switch__toggle"></div>
+</label>
+<br>
+<br>
+<label class="switch">
+  <input type="checkbox" class="switch__input" disabled>
+  <div class="switch__toggle"></div>
+</label>
+
+
+</body>
+</html>
