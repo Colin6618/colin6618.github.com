@@ -26,7 +26,7 @@ var mc2pi = function() {
 		ctx.fillRect(j,k,1,1);
 		ctx.strokeStyle = "#000000"; 
 		ctx.stroke();
-		console.log("x:", j, "y:", k);
+		// console.log("x:", j, "y:", k);
 	};
 
 	var drawTheStatics = function(){
@@ -38,9 +38,9 @@ var mc2pi = function() {
 		ctx.fillStyle = "#008600"; 
 		// 设置字体内容，以及在画布上的位置
 		ctx.fillText("statics: " + inside + "/"+ loopNum, 500, 700);
-		console.log("statics: " + inside + "/"+ loopNum);
+		// console.log("statics: " + inside + "/"+ loopNum);
 		ctx.fillText(inside*4/loopNum, 500, 722);
-		console.log(inside*4/loopNum);
+		// console.log(inside*4/loopNum);
 
 		// 绘制空心字
 		// ctx.strokeText("Hello!", 10, 100); 
@@ -55,9 +55,9 @@ var mc2pi = function() {
 		ctx.fillStyle = "#ffffff"; 
 		// 设置字体内容，以及在画布上的位置
 		ctx.fillText("statics: " + inside + "/"+ loopNum, 500, 700);
-		console.log("statics: " + inside + "/"+ loopNum);
+		// console.log("statics: " + inside + "/"+ loopNum);
 		ctx.fillText(inside*4/loopNum, 500, 722);
-		console.log(inside*4/loopNum);
+		// console.log(inside*4/loopNum);
 		// 绘制空心字
 		// ctx.strokeText("Hello!", 10, 100); 
 	};
@@ -100,7 +100,7 @@ var mc2pi = function() {
 		// var numA = 0.1;
 		// var numB = 0.2;
 		// alert(Math.formatFloat(numA + numB, 100));
-		console.log(opt);
+		// console.log(opt);
 		init(opt);
 		calculatePI(0);
 
@@ -120,7 +120,7 @@ var mc2pi = function() {
 
 	mc2pi({
 			canvas:  document.getElementById("myCanvas"),
-			counter: 100
+			counter: 100000000
 		});
 })();
 
