@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.path-panel{
+		background-color: #F4F6EF;
+		opacity:.8;
+		width:1138px;
+		height:600px;
+		margin:0 auto;
+	}
+	.path-panel ul{
+		color:#555;
+		list-style: none;
+		1width:200px;
+		1height:380px;
+		padding:0;
+		margin:5px;
+		float:left;
+
+	}
+	.path-panel ul li{
+		height:52px;
+		width:200px;
+		background:#fff;
+		margin:5px ;
+		background: #e2f6fd;
+
+	}
+	.path-center{
+		width:208px;
+		height:270px;
+		display: inline-block;
+		background:#fff;
+		position: relative;
+		top:-187px;
+	}
+
+	.path-panel .path-right{
+		float:right;	
+	}
+	
+	.nvpath-panel{
+		1height:600px;
+		1width:230px;
+		1background-color: white;
+		position: relative;
+
+	}
+	.nvpath-panel:last-child{
+		position: relative;
+		float:left;
+	}
+
+	.path-left li>span{
+		height:100%;
+		display: inline-block;
+	}
+	.path-left .web-name{
+		
+	}
+	.path-left .web-name~li{
+		
+	}
+</style>
+<body>
+	<div class="path-panel">
+		<ul class="path-left">
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span >29%</span>
+			</li>
+			<li>
+				<span class="web-name">淘宝首页2014</span>
+				<span>28%</span>
+			</li>
+			<li>
+				<span class="web-name">已买到宝贝</span>
+				<span>9.59%</span>
+			</li>
+			<li>
+				<span class="web-name">搜狗网址</span>
+				<span>5.22%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>29%</span>
+			</li>
+			<li>
+				<span class="web-name">2345网址</span>
+				<span>28%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>9.59%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>5.22%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>29%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>28%</span>
+			</li>
+		</ul>
+		<canvas class="nvpath-panel" width="230" height="600"></canvas>
+		<div class="path-center">
+		</div>
+		<canvas class="nvpath-panel" width="230px" height="600px"></canvas>
+		<ul class="path-right">
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span >29%</span>
+			</li>
+			<li>
+				<span class="web-name">淘宝首页2014</span>
+				<span>28%</span>
+			</li>
+			<li>
+				<span class="web-name">已买到宝贝</span>
+				<span>9.59%</span>
+			</li>
+			<li>
+				<span class="web-name">搜狗网址</span>
+				<span>5.22%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>29%</span>
+			</li>
+			<li>
+				<span class="web-name">2345网址</span>
+				<span>28%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>9.59%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>5.22%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>29%</span>
+			</li>
+			<li>
+				<span class="web-name">360网址导航</span>
+				<span>28%</span>
+			</li>
+		</ul>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="./path.js"></script>
+</body>
+</html>
